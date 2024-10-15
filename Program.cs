@@ -10,6 +10,8 @@ Preparation.display(T);
 //Algorithms.BubbleSort(T);
 //Algorithms.InsertionSort(T);
 //Algorithms.SelectionSort(T);
-Algorithms.QuickSort(0, T.Length - 1, T);
-
+//Algorithms.QuickSort(0, T.Length - 1, T);
+Algorithms.MergeSort(T);
 Preparation.display(T);
+
+

@@ -95,5 +95,70 @@
                 QuickSort(pivot + 1, p, array);
             }
         }
+
+        // MERGE SORT
+
+        public static int[] extraArray; // mergeSort korzysta z dodatkowej tablicy zeby zapamietac poczatkowe wartości bo bedziemy je nadpisywac
+        public static void MergeSort(int[] arrayToSort)
+        {
+            extraArray = new int[arrayToSort.Length]; // tworzymy dodatkowa tablice 
+
+            mergeSortFunction(arrayToSort, 0, arrayToSort.Length - 1); // sortujemy zadaną tablice
+        }
+
+        private static void mergeSortFunction(int[] array, int leftIndex, int rightIndex)
+        {
+            if (leftIndex < rightIndex) // sprawdzamy czy mamy wiecej niz jeden element
+            {
+                int pivot = (leftIndex + rightIndex) / 2;
+                mergeSortFunction(array, leftIndex, pivot); // sortujemy lewa strone
+                mergeSortFunction(array, pivot + 1, rightIndex); // sortujemy prawa strone
+                merge(array, leftIndex, pivot, rightIndex); // laczymy lewa, prawa + pivot w jedną  
+            }
+        }
+
+        private static void merge(int[] array, int leftIndex, int pivot, int rightIndex)
+        {
+            for (int i = leftIndex; i <= rightIndex; i++)
+            {
+                extraArray[i] = array[i]; // zapisujemy wartosci poczatkowe
+                //Console.WriteLine(array[i]);
+            }
+
+            int finger1 = leftIndex; // wskazuje na element z lewej czesci tablicy
+            int finger2 = pivot + 1;  // wskazuje na element z prawej czesci tablicy (po podzieleniu)
+            int current = leftIndex;
+
+            while (finger1 <= pivot && finger2 <= rightIndex) // sprawdzamy po kolei elementy z obu czesci
+            {
+                if (extraArray[finger1] <= extraArray[finger2]) // jesli po lewej jest mniejszy
+                {
+                    array[current] = extraArray[finger1]; // to dajemy go do tablicy wynikowej
+                    finger1++;
+                    current++;
+                }
+                else // jesli po prawej jest mniejszy
+                {
+                    array[current] = extraArray[finger2]; // to dajemy go do tablicy wynikowej 
+                    finger2++;
+                    current++;
+                }
+
+
+            }
+
+            // co jeśli elementy po prawej stronie caly czas byly mniejsze, wpisalismy je, petla zostala przerwana a elementy z prawej czesci nie zostaly uwzglednione
+
+            // nie musimy sprawdzac czy elementy wszystkie elementy znajdujace sie początkowo po prawej stronie zostały przepisane, bo nawet jeśli nie, to znaczy że były tam od początku
+
+            while (finger1 <= pivot)
+            {
+                array[current] = extraArray[finger1];
+                current++;
+                finger1++;
+            }
+
+
+        }
     }
 }
