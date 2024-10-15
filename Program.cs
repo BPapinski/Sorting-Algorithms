@@ -11,7 +11,7 @@ Preparation.display(T);
 //Algorithms.InsertionSort(T);
 //Algorithms.SelectionSort(T);
 //Algorithms.QuickSort(0, T.Length - 1, T);
-Algorithms.MergeSort(T);
+//Algorithms.MergeSort(T);
+
+Algorithms.ShellSort(T);
 Preparation.display(T);
-
-

@@ -143,8 +143,6 @@
                     finger2++;
                     current++;
                 }
-
-
             }
 
             // co jeśli elementy po prawej stronie caly czas byly mniejsze, wpisalismy je, petla zostala przerwana a elementy z prawej czesci nie zostaly uwzglednione
@@ -157,8 +155,79 @@
                 current++;
                 finger1++;
             }
+        }
 
 
+        public static void ShellSort(int[] T)
+        {
+            int swapCounter = 0;
+            int j, i;
+            int gap = T.Length / 2;
+            while (gap > 0) // warunek ogolny
+            {
+                j = gap;
+                while (j < T.Length) // patrzymy czy j czyli element z porownywanej pary na prawo nie wyjechal poza tablice
+                {
+                    i = j - gap; // wyznaczam index elementu po lewo z porownywanej pary
+                    while (i >= 0)
+                    {
+                        if (T[i + gap] > T[i]) // patrze czy sa dobrze posortowane
+                        {
+                            break;
+                        }
+                        if (T[i + gap] <= T[i]) // sprawdzam czy sa zle, jesli tak to zamieniam miejscami
+                        {
+                            var temp = T[i + gap];
+                            T[i + gap] = T[i];
+                            T[i] = temp;
+
+                            swapCounter++;
+                        }
+                        i = i - gap; // przesuwam lewa granice o gap w lewo zeby zmienic element porownywany po lewo
+                    }
+                    j++; // ziwkszam index elementu porownywanego na prawo o jeden 
+                }
+                gap /= 2; // zmniejaszam gap o polowe
+            }
+        }
+
+
+
+        public static void ShellSortLazarus(int[] T)
+        {
+            int swapCounter = 0;
+            int j, i;
+            int gap = (2 * T.Length / 4) + 1;
+            while (gap > 0) // warunek ogolny
+            {
+                j = gap;
+                while (j < T.Length) // patrzymy czy j czyli element z porownywanej pary na prawo nie wyjechal poza tablice
+                {
+                    i = j - gap; // wyznaczam index elementu po lewo z porownywanej pary
+                    while (i >= 0)
+                    {
+                        if (T[i + gap] > T[i]) // patrze czy sa dobrze posortowane
+                        {
+                            break;
+                        }
+                        if (T[i + gap] <= T[i]) // sprawdzam czy sa zle, jesli tak to zamieniam miejscami
+                        {
+                            var temp = T[i + gap];
+                            T[i + gap] = T[i];
+                            T[i] = temp;
+
+                            swapCounter++;
+                        }
+                        i = i - gap; // przesuwam lewa granice o gap w lewo zeby zmienic element porownywany po lewo
+                    }
+                    j++; // ziwkszam index elementu porownywanego na prawo o jeden 
+                }
+                if (gap == 1) // sprawdzam czy te przejscie odbywalo sie dla gapu równego 1, jeśli tak to było one ostatnim
+                {
+                    break;
+                }
+                gap = (2 * T.Length / 4) + 1; ; // zmniejaszam gap o ustaloną dla tego algorytmu wartość
+            }
         }
     }
 }
