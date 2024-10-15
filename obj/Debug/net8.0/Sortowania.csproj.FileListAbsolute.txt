@@ -1,0 +1,14 @@
+E:\Repos\SGGW\Sortowania\Sortowania\bin\Debug\net8.0\Sortowania.exe
+E:\Repos\SGGW\Sortowania\Sortowania\bin\Debug\net8.0\Sortowania.deps.json
+E:\Repos\SGGW\Sortowania\Sortowania\bin\Debug\net8.0\Sortowania.runtimeconfig.json
+E:\Repos\SGGW\Sortowania\Sortowania\bin\Debug\net8.0\Sortowania.dll
+E:\Repos\SGGW\Sortowania\Sortowania\bin\Debug\net8.0\Sortowania.pdb
+E:\Repos\SGGW\Sortowania\Sortowania\obj\Debug\net8.0\Sortowania.GeneratedMSBuildEditorConfig.editorconfig
+E:\Repos\SGGW\Sortowania\Sortowania\obj\Debug\net8.0\Sortowania.AssemblyInfoInputs.cache
+E:\Repos\SGGW\Sortowania\Sortowania\obj\Debug\net8.0\Sortowania.AssemblyInfo.cs
+E:\Repos\SGGW\Sortowania\Sortowania\obj\Debug\net8.0\Sortowania.csproj.CoreCompileInputs.cache
+E:\Repos\SGGW\Sortowania\Sortowania\obj\Debug\net8.0\Sortowania.dll
+E:\Repos\SGGW\Sortowania\Sortowania\obj\Debug\net8.0\refint\Sortowania.dll
+E:\Repos\SGGW\Sortowania\Sortowania\obj\Debug\net8.0\Sortowania.pdb
+E:\Repos\SGGW\Sortowania\Sortowania\obj\Debug\net8.0\Sortowania.genruntimeconfig.cache
+E:\Repos\SGGW\Sortowania\Sortowania\obj\Debug\net8.0\ref\Sortowania.dll
