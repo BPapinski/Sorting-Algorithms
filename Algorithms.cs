@@ -18,7 +18,7 @@
             }
         }
 
-        public static void insertionSort(int[] T)
+        public static void InsertionSort(int[] T)
         {
             // piwerszy element tworzy posortowaną część tablicy
             for (int i = 1; i < T.Length; i++)
@@ -32,6 +32,25 @@
                     j--;
                 }
                 T[j + 1] = key; // znalezlismy element mniejszy na pozycji j wiec ustawiam analizowany element na pozycji j+1
+            }
+        }
+
+        public static void SelectionSort(int[] array)
+        {
+            int index = 0;
+            int temp;
+            for (int i = 0; i < array.Length - 1; i++)
+            {
+                for (int j = i + 1; j < array.Length; j++)
+                {
+                    if (array[j] < array[index])
+                    {
+                        index = j;
+                    }
+                }
+                temp = array[i];
+                array[i] = array[index];
+                array[index] = temp;
             }
         }
     }

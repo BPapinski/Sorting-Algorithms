@@ -8,6 +8,7 @@ Preparation.fill(T);
 Preparation.display(T);
 
 //Algorithms.BubbleSort(T);
-Algorithms.insertionSort(T);
+//Algorithms.InsertionSort(T);
+Algorithms.SelectionSort(T);
 
 Preparation.display(T);

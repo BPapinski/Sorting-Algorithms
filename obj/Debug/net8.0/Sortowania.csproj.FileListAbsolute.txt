@@ -12,3 +12,4 @@ E:\Repos\SGGW\Sortowania\Sortowania\obj\Debug\net8.0\refint\Sortowania.dll
 E:\Repos\SGGW\Sortowania\Sortowania\obj\Debug\net8.0\Sortowania.pdb
 E:\Repos\SGGW\Sortowania\Sortowania\obj\Debug\net8.0\Sortowania.genruntimeconfig.cache
 E:\Repos\SGGW\Sortowania\Sortowania\obj\Debug\net8.0\ref\Sortowania.dll
+E:\Repos\SGGW\Sortowania\Sortowania\obj\Debug\net8.0\Sortowania.sourcelink.json
