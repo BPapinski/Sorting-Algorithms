@@ -53,5 +53,47 @@
                 array[index] = temp;
             }
         }
+
+        public static int Partition(int l, int p, int[] T)
+        {
+            if (l == p) return l; // sprawdzamy czy tablica nie jest jednoelementowa
+
+            int temp;
+            int pivot = T[p]; // ustalam ostatni element na pivot
+
+            int i = l - 1;
+            int j = l;
+            while (j < p)
+            {
+                if (T[j] < pivot) // wyznaczamy elementy tablicy mniejsze od pivotu i przenosimy je na początek
+                {
+                    temp = T[j];
+                    T[j] = T[i + 1];
+                    T[i + 1] = temp; // i + 1 -- index pierwszego elementu nieposortowanej części
+
+                    i++; // liczymy ile nastąpiło zmian, dzięki temu wyznaczymy ile jest elementow mniejszych od pivotu co pozwoli na ustalenie jego docelowej pozycji
+                }
+                j++;
+            }
+
+            // ustalamy pivot na odpowiednim miejscu
+            temp = T[i + 1];
+            T[i + 1] = T[p];
+            T[p] = temp;
+
+            i++;
+
+            return i;
+        }
+        public static void QuickSort(int l, int p, int[] array)
+        {
+            int pivot;
+            if (l <= p)
+            {
+                pivot = Partition(l, p, array);
+                QuickSort(l, pivot - 1, array);
+                QuickSort(pivot + 1, p, array);
+            }
+        }
     }
 }

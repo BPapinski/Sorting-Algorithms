@@ -9,6 +9,7 @@ Preparation.display(T);
 
 //Algorithms.BubbleSort(T);
 //Algorithms.InsertionSort(T);
-Algorithms.SelectionSort(T);
+//Algorithms.SelectionSort(T);
+Algorithms.QuickSort(0, T.Length - 1, T);
 
 Preparation.display(T);
